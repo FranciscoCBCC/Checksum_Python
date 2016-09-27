@@ -39,31 +39,41 @@ def sair():
 
 janela = Tk() #Instancia uma janela
 janela.title("Calcular Checksum")
-janela.geometry("200x200") 
+janela.geometry("300x300") 
 
     #Botão De calcular cchecksum
 #frame1 = Frame(janela) #Cria um frame na janela
 #frame1.pack() #Exibe o frame
+tituloCx1 = Label(janela, text='Digite a mensagem para calcular o checksum')
+tituloCx1.pack()
 entrada = Entry(janela)
 entrada.pack()
 botao = Button(janela, text = "Calcular", command = entradaMensagem) 
 botao['width'] = 10 #Define a largura do botão
 #botao.bind("", entradaMensagem) #Cria um event dando uma ação ao botão
 botao.pack() #Exibe oo botão
+lb = Label(janela, text='Checksum')
+lb.pack()
+espaco = Label(janela, text=' ')
+espaco.pack()
     #
+    
     #Botão de validar mensagem
-entradaMsg = Entry(janela)
+tituloCx2 = Label(janela, text='Digite a mensagem para validá-la')
+tituloCx2.pack()
+entradaMsg = Entry(janela) #Caixa de entrada da mensagem para validar
 entradaMsg.pack()
-entradaChecksum = Entry(janela)
+tituloCx3 = Label(janela, text='Digite o checksum para validar a mensagem')
+tituloCx3.pack()
+entradaChecksum = Entry(janela) #Caixa de entrada da checksum para validar a mensagem
 entradaChecksum.pack()
 botaoValidar = Button(janela, text = "Validar Mensagem", command = validarMensagem) 
-botaoValidar['width'] = 50
+botaoValidar['width'] = 20
 botaoValidar.pack()
     #
 
-lb = Label(janela, text='Checksum')
-lb.pack()
-lb1 = Label(janela, text='Validação')
+
+lb1 = Label(janela, text='Resultado da Validação')
 lb1.pack()
 
 janela.mainloop() #Loop da janela principal
